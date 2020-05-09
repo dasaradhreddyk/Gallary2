@@ -1,0 +1,15 @@
+C:\Project\BTP\gallary\Gallary2\Gallary\bin\BWS\Debug\netcoreapp2.1\Gallary.deps.json
+C:\Project\BTP\gallary\Gallary2\Gallary\bin\BWS\Debug\netcoreapp2.1\Gallary.runtimeconfig.json
+C:\Project\BTP\gallary\Gallary2\Gallary\bin\BWS\Debug\netcoreapp2.1\Gallary.runtimeconfig.dev.json
+C:\Project\BTP\gallary\Gallary2\Gallary\bin\BWS\Debug\netcoreapp2.1\Gallary.dll
+C:\Project\BTP\gallary\Gallary2\Gallary\bin\BWS\Debug\netcoreapp2.1\Gallary.pdb
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.csprojAssemblyReference.cache
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.csproj.CoreCompileInputs.cache
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cache
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cs
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.AssemblyInfoInputs.cache
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.AssemblyInfo.cs
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.RazorTargetAssemblyInfo.cache
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.dll
+C:\Project\BTP\gallary\Gallary2\Gallary\obj\BWS\Debug\netcoreapp2.1\Gallary.pdb

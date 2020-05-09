@@ -1,0 +1,23 @@
+    <td *ngFor="let col of columns; last as isLast">
+        <!--<div *ngIf="isLast" class="component-tag-sm">
+            <span>app-table-row</span>
+        </div>
+        <div class="col-md-4 img-hover"> <img class="img-responsive img-rounded" src="{{character[col]}}" width="100" /> </div>
+        <div> <a href="{{character[col]}}"> $</a></div>-->
+        <figure class="col-md-4">
+            
+            <a   (click)="toggle(character[col])"  class="black-text" target="_blank" href="{{character[col]}}"
+               data-size="160x106">
+                <img  alt="Modify" src="{{character[col]}}"
+                     width="120" />
+               
+                <h3 class="text-center my-3"></h3>
+            </a>
+        </figure>
+    </td>
+
+    <script>
+        $(function () {
+            $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+        });
+    </script>
