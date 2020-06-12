@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cnN+dGMhnWlGtqcUOQJPzas4khLf1TcH3ufO3ys3wStY8qTKiq+fIplGhB6Zfjd+f4dk/NsrTAp4NTCPogf5bQ==",
+  "dgSpecHash": "pxHWK097Cle4nbOpJYMU6VX+LHGqJI9WUGkQ9YruRHh5QthFZ3xq/WVPvN5QCQgUCyMCKXufNpScA+iWlSgxqA==",
   "success": true,
-  "projectFilePath": "C:\\Project\\gallary\\Gallary2\\Gallary\\Gallary.csproj",
+  "projectFilePath": "C:\\Project\\gallary\\backup\\gallary version 1\\Gallary2\\Gallary\\Gallary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dasaradh.kalapureddy\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\dasaradh.kalapureddy\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",

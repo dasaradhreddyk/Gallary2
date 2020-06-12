@@ -8,10 +8,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input } from '@angular/core';
+import { AdventureTimeService } from '../services/adventure-time.service';
 var TableRowComponent = /** @class */ (function () {
-    function TableRowComponent() {
+    function TableRowComponent(atService) {
+        this.atService = atService;
     }
     TableRowComponent.prototype.ngOnInit = function () {
+    };
+    TableRowComponent.prototype.toggle = function (str) {
+        this.atService.DeleteContent(str);
+        console.log(str);
     };
     __decorate([
         Input(),
@@ -21,13 +27,17 @@ var TableRowComponent = /** @class */ (function () {
         Input(),
         __metadata("design:type", Array)
     ], TableRowComponent.prototype, "columns", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], TableRowComponent.prototype, "value", void 0);
     TableRowComponent = __decorate([
         Component({
             selector: '[app-table-row]',
             templateUrl: './table-row.component.html',
             styleUrls: ['./table-row.component.css']
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [AdventureTimeService])
     ], TableRowComponent);
     return TableRowComponent;
 }());

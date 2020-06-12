@@ -12635,11 +12635,11 @@
   "project": {
     "version": "1.0.1",
     "restore": {
-      "projectUniqueName": "C:\\Project\\gallary\\Gallary2\\Gallary\\Gallary.csproj",
+      "projectUniqueName": "C:\\Project\\gallary\\backup\\gallary version 1\\Gallary2\\Gallary\\Gallary.csproj",
       "projectName": "Gallary",
-      "projectPath": "C:\\Project\\gallary\\Gallary2\\Gallary\\Gallary.csproj",
+      "projectPath": "C:\\Project\\gallary\\backup\\gallary version 1\\Gallary2\\Gallary\\Gallary.csproj",
       "packagesPath": "C:\\Users\\dasaradh.kalapureddy\\.nuget\\packages\\",
-      "outputPath": "C:\\Project\\gallary\\Gallary2\\Gallary\\obj\\",
+      "outputPath": "C:\\Project\\gallary\\backup\\gallary version 1\\Gallary2\\Gallary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dasaradh.kalapureddy\\AppData\\Roaming\\NuGet\\NuGet.Config",

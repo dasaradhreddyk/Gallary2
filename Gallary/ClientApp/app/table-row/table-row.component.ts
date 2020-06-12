@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AdventureTimeService } from '../services/adventure-time.service';
 
 @Component({
@@ -10,7 +10,12 @@ export class TableRowComponent implements OnInit {
 
   @Input() character: any;
   @Input() columns: string[];
-  @Input() value:string;
+    @Input() value: string;
+    @Input() url: string;
+    @Output() url1 = new EventEmitter<string>();
+    @Input() searchword1: string;
+    @Output() searchword = new EventEmitter<{ url: string, type: string }>();
+
   constructor(private atService: AdventureTimeService) { }
 
   ngOnInit() {
@@ -19,6 +24,10 @@ export class TableRowComponent implements OnInit {
     toggle(str)
     {
      this.atService.DeleteContent(str);
-      console.log(str);
+        console.log(str);
+        this.url = str;
+        //this.url1.emit(str);
+        this.searchword.emit({ url: str, type: 'image' });
+        
     }
 }

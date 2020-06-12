@@ -19,6 +19,8 @@ import { SearchWordComponent } from './search-word/search-word.component';
 import { HomeComponent } from './home/home.component';
 import { NguiInViewComponent } from './ngui-in-view/ngui-in-view.component';
 import { VideoplayerComponent } from './videoplayer/videoplayer.component';
+import { PreviewComponent } from './preview/preview.component';
+import { ShareComponent } from './share/share.component';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -34,6 +36,8 @@ var AppModule = /** @class */ (function () {
                 HomeComponent,
                 NguiInViewComponent,
                 VideoplayerComponent,
+                PreviewComponent,
+                ShareComponent,
             ],
             imports: [
                 BrowserModule,

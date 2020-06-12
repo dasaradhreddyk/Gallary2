@@ -43,6 +43,13 @@ var AdventureTimeService = /** @class */ (function () {
     AdventureTimeService.prototype.getColumns = function () {
         return ["name", "age", "species", "occupation", "info1", "info2"];
     };
+    //delete content 
+    AdventureTimeService.prototype.DeleteContent = function (str) {
+        var url = "/api/data/DeleteContent?input=" + str;
+        this.http.get(url).subscribe(function (result) {
+            console.log("deleted content");
+        });
+    };
     //video data ..
     AdventureTimeService.prototype.getVideodata = function (searchword) {
         var _this = this;

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Gallary.Controllers
 {
@@ -34,7 +36,21 @@ namespace Gallary.Controllers
         [HttpGet("[action]")]
         public void DeleteContent(string input)
         {
-            deleteList.Add(input);
+            // deleteList.Add(input);
+            var lastUpdate = DateTime.Now;
+            //Add data to DB
+            SqlConnection cn = new SqlConnection("Data Source=EAN-LT-224\\SQLEXPRESS;initial catalog=UserClicks ; User ID=dasaradh;Password=sa123;Integrated Security=SSPI;");
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO dbo.UserClcksActiveSessions (" + " Userid, link, lastupdate " + ") VALUES (" + " 1, @link, @lastupdate" + ")", cn);
+
+            cmd.Parameters.Add("@link", SqlDbType.VarChar, 50).Value = input;
+            cmd.Parameters.Add("@LastUpdate", SqlDbType.DateTime).Value = DateTime.Now;
+
+
+            cn.Open();
+            cmd.ExecuteNonQuery();
+            cn.Close();
+
             input += "here";
             return;
         }
@@ -137,7 +153,7 @@ namespace Gallary.Controllers
                         lineOfText2 = file.ReadLine();
                         Boolean found;
                         //Do something with the lineOfText(
-                        if (!lineOfText2.Contains("profile") || deleteList.Contains(lineOfText2))
+                        if (!lineOfText2.Contains("profile") )
                             continue;
                         else
                         {
@@ -148,7 +164,11 @@ namespace Gallary.Controllers
                             obj.name = obj.name.Replace(":", "");
                             var s  = obj.name.Split("_");
                             obj.name = s[0];
-                            obj.name = "https://www.facebook.com/" + obj.name;
+                            if(!obj.name.Contains("https://www.facebook.com/"))
+                            obj.name = "https://www.facebook.com/" +obj.name;
+                            else
+                                obj.name = obj.name;
+
 
                             string output = lineOfText2.Split(':', ',')[1];
                             obj.age = output.Replace("\"", "");
@@ -157,8 +177,8 @@ namespace Gallary.Controllers
                             var lineOfText3 = file.ReadLine();
                             if (lineOfText3 != null)
                             {
-                                obj.occupation = lineOfText1.Replace("FileName", "");
-                                obj.occupation = obj.name.Replace("Filename", "");
+                                obj.occupation = lineOfText3.Replace("FileName", "");
+                                obj.occupation = obj.occupation.Replace("Filename", "");
                                 obj.occupation = obj.occupation.Replace("filename", "");
                                 obj.occupation = obj.occupation.Replace(" ", "");
                                 obj.occupation = obj.occupation.Replace(":", "");
@@ -180,7 +200,13 @@ namespace Gallary.Controllers
                             if (lineOfText5 != null)
                             {
                                 obj.info1 = lineOfText5.Replace("FileName:", "");
-                                obj.info1 = "https://www.facebook.com/" + obj.info1;
+                                obj.info1 = obj.info1.Replace("Filename", "");
+                                obj.info1 = obj.info1.Replace("filename", "");
+                                obj.info1 = obj.info1.Replace(" ", "");
+                                obj.info1 = obj.info1.Replace(":", "");
+                                var s2 = obj.info1.Split("_");
+                                obj.info1 = s2[0];
+                                obj.info1 = "https://www.facebook.com/" +obj.info1;
                             }
                             var lineOfText6 = file.ReadLine();
                             if (lineOfText6 != null)

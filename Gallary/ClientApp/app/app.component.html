@@ -36,20 +36,31 @@
         <div class="w3-container">
             <h4 class="w3-padding-64"><b>TALAASH</b></h4>
             <h4><button (click)="click()">Login</button></h4>
+          
+
+            <app-modal #modal></app-modal>
+            <p>
+              Check your favourites
+            </p>
+            <button (click)="openModal1()">My favourites</button>
+
+           
+
             <div class="w3-bar-block">
-               
+
                 <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Content  Marketing  TOOLS </a>
                 <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">our Services</a>
                 <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">FAQ</a>
-                             <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+                <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
             </div>
             <div class="w3-half">
 
                 <app-fileupload></app-fileupload>
-                
+
             </div>
             <div>
                 <app-events (searchword)="childEventClicked($event)"></app-events>
+
             </div>
         </div>
      
@@ -84,11 +95,13 @@
                     <div *ngIf="type === 'video'">
                         <my-video></my-video>
                     </div>
-                   
-                        <div *ngIf="type != 'video'">
-                            <app-table [searchword]=searchword [type]="type"></app-table>
-                        </div>
                     
+                        <div  style='overflow:scroll; width:1200px;height:1400px;' *ngIf="type != 'video'">
+                            <app-table [searchword]=searchword  (urlEmit)="childEventClicked1($event)" [type]="type"></app-table>
+                        </div>
+                        <div >
+                            <app-preview [url]=url ></app-preview>
+                        </div>
 </div>
               
                     <section class="two">

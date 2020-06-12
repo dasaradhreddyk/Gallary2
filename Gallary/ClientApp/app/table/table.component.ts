@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges} from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, Output, EventEmitter} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Router, ActivatedRoute, Params, ParamMap, RouterStateSnapshot, NavigationEnd  } from '@angular/router';
 import { AdventureTimeService } from '../services/adventure-time.service';
@@ -14,6 +14,9 @@ export class TableComponent implements OnInit {
     param2: string;
     @Input() searchword: string;
     @Input() type: string;
+    @Input() url: string;
+    @Input() searchword1: string;
+    @Output() urlEmit = new EventEmitter<{ url: string, type: string }>();
   characters: Observable<any[]>;
   columns: string[];
   public activatedRoute: ActivatedRoute;
@@ -29,6 +32,13 @@ export class TableComponent implements OnInit {
         // see also
         console.log(val instanceof NavigationEnd)
     });
+    }
+    childEventClicked(event: string) {
+
+      
+        this.url = event["url"];
+        this.urlEmit.emit({ url: this.url, type: "" });
+        console.log("url in parent  :" + this.url);
     }
     ngOnChanges(changes: SimpleChanges) {
         this.columns = this.atService.getColumns();

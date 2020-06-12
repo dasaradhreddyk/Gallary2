@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 
 import { NguiInViewComponent } from './ngui-in-view/ngui-in-view.component';
 import { VideoplayerComponent } from './videoplayer/videoplayer.component';
+import { PreviewComponent } from './preview/preview.component';
+import { ShareComponent } from './share/share.component';
 
 @NgModule({
     declarations: [
@@ -27,6 +29,8 @@ import { VideoplayerComponent } from './videoplayer/videoplayer.component';
         HomeComponent,        
         NguiInViewComponent,
         VideoplayerComponent,
+        PreviewComponent,
+        ShareComponent,
         
 
     ],

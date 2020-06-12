@@ -13,7 +13,6 @@ C:\Project\BTP\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorTar
 C:\Project\BTP\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.dll
 C:\Project\BTP\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.pdb
 C:\Project\BTP\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csprojAssemblyReference.cache
-C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csprojAssemblyReference.cache
 C:\Project\gallary\Gallary2\Gallary\bin\Debug\netcoreapp2.1\angular.json
 C:\Project\gallary\Gallary2\Gallary\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Project\gallary\Gallary2\Gallary\bin\Debug\netcoreapp2.1\appsettings.json
@@ -29,13 +28,64 @@ C:\Project\gallary\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.runtimeconfi
 C:\Project\gallary\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.runtimeconfig.dev.json
 C:\Project\gallary\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.dll
 C:\Project\gallary\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.pdb
-C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csproj.CoreCompileInputs.cache
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cache
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cs
-C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.AssemblyInfoInputs.cache
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.AssemblyInfo.cs
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorTargetAssemblyInfo.cache
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.dll
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.pdb
 C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.genruntimeconfig.cache
+C:\Project\gallary\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csprojAssemblyReference.cache
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csprojAssemblyReference.cache
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.dll
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.pdb
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\angular.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\ClientApp\tsconfig.app.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\ClientApp\tsconfig.spec.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\ClientApp\tslint.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\package-lock.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\package.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\tsconfig.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.deps.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.runtimeconfig.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.runtimeconfig.dev.json
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.dll
+C:\Project\gallary\backup\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.pdb
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csproj.CoreCompileInputs.cache
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cache
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cs
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.AssemblyInfoInputs.cache
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.AssemblyInfo.cs
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorTargetAssemblyInfo.cache
+C:\Project\gallary\backup\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.genruntimeconfig.cache
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csprojAssemblyReference.cache
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.dll
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.pdb
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\angular.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\ClientApp\tsconfig.app.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\ClientApp\tsconfig.spec.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\ClientApp\tslint.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\tsconfig.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\package-lock.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\package.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.deps.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.runtimeconfig.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.runtimeconfig.dev.json
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.dll
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\bin\Debug\netcoreapp2.1\Gallary.pdb
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.csproj.CoreCompileInputs.cache
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cache
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorAssemblyInfo.cs
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.AssemblyInfoInputs.cache
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.AssemblyInfo.cs
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.RazorTargetAssemblyInfo.cache
+C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\obj\Debug\netcoreapp2.1\Gallary.genruntimeconfig.cache
