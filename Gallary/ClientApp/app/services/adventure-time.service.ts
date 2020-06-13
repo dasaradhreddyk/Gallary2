@@ -4,6 +4,7 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
 import { HttpClient } from '@angular/common/http'
 import { CHARACTERS } from './mock-data';
+import { CHARACTERS1 } from './mock-data';
 import { concat } from 'rxjs';
 
 @Injectable()
@@ -16,6 +17,7 @@ export class AdventureTimeService {
 
     public videoids1: string[]=[];
     public CHARACTERS: any[];
+    public CHARACTERS1: any[];
     constructor(http: HttpClient) {
         this.http = http;
         http.get < WeatherForecast[]>('/api/data/GetUserData?input=rise').subscribe
@@ -54,15 +56,33 @@ export class AdventureTimeService {
   }
    //delete content 
 
-   DeleteContent(str)
+   Updateclicks(str)
    {
-             var url = "/api/data/DeleteContent?input=" + str;
+       var url = "/api/data/Updateclicks?input=" + str;
             this.http.get(url).subscribe
             ( result => {
                 console.log("deleted content"); 
                   });
    }
+    GetFavourites(str): Observable<WeatherForecast[]> {
+        var url = "/api/data/GetFavourites?userid=" + str;
+        while (CHARACTERS1.length > 0) {
+            CHARACTERS1.pop();
+        }
+        this.http.get<WeatherForecast[]>(url).subscribe
+            (
+                result => {
+                    this.data = result;
+                    console.log(this.data);
+                    this.data.forEach(function (element) {
+                        CHARACTERS1.push(element);
+                    });
 
+                    CHARACTERS1.push(this.data[0]);
+                }, error => console.error(error));
+        return Observable.of(CHARACTERS1).delay(100);
+        
+    }
 
   //video data ..
 

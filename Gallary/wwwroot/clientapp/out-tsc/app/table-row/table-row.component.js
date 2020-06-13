@@ -18,7 +18,7 @@ var TableRowComponent = /** @class */ (function () {
     TableRowComponent.prototype.ngOnInit = function () {
     };
     TableRowComponent.prototype.toggle = function (str) {
-        this.atService.DeleteContent(str);
+        this.atService.Updateclicks(str);
         console.log(str);
         this.url = str;
         //this.url1.emit(str);

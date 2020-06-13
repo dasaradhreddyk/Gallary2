@@ -29,12 +29,22 @@ namespace Gallary.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        
+
+
+
+
+        /// <summary>
+        /// =========================================================================================================
+        /// 
+        /// </summary> SAVE FAVOURITES TO DB
+        /// 
+        /// <param name="input"></param>
         //Delete data from files. Updaet deleted content and Batch job clear content from files. 
         //Menu : click from file info on Delete.
+        //============================================================================================================
 
         [HttpGet("[action]")]
-        public void DeleteContent(string input)
+        public void Updateclicks(string input)
         {
             // deleteList.Add(input);
             var lastUpdate = DateTime.Now;
@@ -55,6 +65,66 @@ namespace Gallary.Controllers
             return;
         }
 
+
+
+        /// <summary>
+        /// =========================================================================================================
+        /// </summary> GET FAVOURITES DATA
+        /// <param name="input"></param>
+        /// <returns></returns>
+        ///==========================================================================================================
+        /// 
+        [HttpGet("[action]")]
+
+        public IEnumerable<UserData> GetFavourites(string userid)
+        {
+            List<string> imageList = new List<string>();
+            List<UserData> lst = new List<UserData>();
+            // deleteList.Add(input);
+            var lastUpdate = DateTime.Now;
+            //Add data to DB
+            SqlConnection cn = new SqlConnection("Data Source=EAN-LT-224\\SQLEXPRESS;initial catalog=UserClicks ; User ID=dasaradh;Password=sa123;Integrated Security=SSPI;");
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM UserClcksActiveSessions ", cn);
+            cn.Open();
+            cmd.Parameters.Add("@USERID", SqlDbType.VarChar, 50).Value = userid;
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var s = (string)reader["link"];
+                    imageList.Add(s);                    
+                }
+            }
+            int totalImages = imageList.Count;
+            for (int i = 0; i < imageList.Count; i++)
+            {
+                UserData obj = new UserData();
+                obj.info1 = imageList.ElementAt(i); i++;
+                if (i < totalImages) obj.name = imageList.ElementAt(i ); i++;
+                if (i < totalImages) obj.age = imageList.ElementAt(i ); i++;
+                if (i < totalImages) obj.occupation = imageList.ElementAt(i ); i++;
+                if (i < totalImages) obj.species = imageList.ElementAt(i ); i++;
+                if (i < totalImages) obj.info1 = imageList.ElementAt(i ); i++;
+                if (i < totalImages) obj.info2 = imageList.ElementAt(i ); i++;
+                lst.Add(obj);
+            }
+
+            cn.Close();
+            return lst ;
+        }
+
+
+
+
+
+        /// <summary>
+        /// =========================================================================================================
+        /// </summary> GET VIDEO DATA 
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// =========================================================================================================
+        /// 
         //Get Video  Data  load data from youtube. 
         //Menu : get video data from youtube.
 
@@ -126,8 +196,13 @@ namespace Gallary.Controllers
             return randomList; //return the new random list
         }
 
-        //Get User Data  load data for images. 
-        //Menu : get face book data .
+        /// <summary>
+        ///===========================================================================================================
+        /// </summary> GET IMAGE DATA 
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// ===========================================================================================================
+        /// 
 
         [HttpGet("[action]")]
         public IEnumerable<UserData> GetUserData(string input)
@@ -153,7 +228,7 @@ namespace Gallary.Controllers
                         lineOfText2 = file.ReadLine();
                         Boolean found;
                         //Do something with the lineOfText(
-                        if (!lineOfText2.Contains("profile") )
+                        if (lineOfText2 ==null || !lineOfText2.Contains("profile") )
                             continue;
                         else
                         {
@@ -253,7 +328,15 @@ namespace Gallary.Controllers
             //});
         }
 
-        
+        /// <summary>
+        /// 
+        /// ==========================================================================================================
+        /// </summary>  DEMO CONTROLLER METHOD 
+        /// <param name="input"></param>
+        /// <returns></returns>
+        ///===========================================================================================================
+        /// 
+        /// 
 
         //Good example action to get weather data. 
         [HttpGet("[action]")]
@@ -267,6 +350,13 @@ namespace Gallary.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
         }
+        /// <summary>
+        /// ==========================================================================================================
+        /// </summary> GENERIC DATA RETRIVALS
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// ==========================================================================================================
+        /// 
 
         //Following functions Not being used. 
         [HttpGet("[action]")]

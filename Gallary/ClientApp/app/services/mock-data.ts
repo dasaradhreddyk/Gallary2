@@ -10,4 +10,17 @@ export const CHARACTERS: any[] =
 
   },
   
-]
+    ]
+export const CHARACTERS1: any[] =
+    [
+        {
+            name: '',
+            age: '',
+            species: '',
+            occupation: '',
+            info1: '',
+            info2: ''
+
+        },
+
+    ]

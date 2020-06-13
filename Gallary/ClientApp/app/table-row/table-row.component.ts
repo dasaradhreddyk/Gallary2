@@ -23,7 +23,7 @@ export class TableRowComponent implements OnInit {
 
     toggle(str)
     {
-     this.atService.DeleteContent(str);
+        this.atService.Updateclicks(str);
         console.log(str);
         this.url = str;
         //this.url1.emit(str);
