@@ -85,7 +85,7 @@ namespace Gallary.Controllers
             //Add data to DB
             SqlConnection cn = new SqlConnection("Data Source=EAN-LT-224\\SQLEXPRESS;initial catalog=UserClicks ; User ID=dasaradh;Password=sa123;Integrated Security=SSPI;");
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM UserClcksActiveSessions ", cn);
+            SqlCommand cmd = new SqlCommand("SELECT top 60  * FROM UserClcksActiveSessions order by lastupdate desc ", cn);
             cn.Open();
             cmd.Parameters.Add("@USERID", SqlDbType.VarChar, 50).Value = userid;
             using (SqlDataReader reader = cmd.ExecuteReader())

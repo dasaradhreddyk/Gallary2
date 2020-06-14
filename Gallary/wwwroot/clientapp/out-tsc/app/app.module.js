@@ -21,6 +21,9 @@ import { NguiInViewComponent } from './ngui-in-view/ngui-in-view.component';
 import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 import { PreviewComponent } from './preview/preview.component';
 import { ShareComponent } from './share/share.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { AuthService } from './auth.service';
+import { ProfileComponent } from './profile/profile.component';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -38,6 +41,8 @@ var AppModule = /** @class */ (function () {
                 VideoplayerComponent,
                 PreviewComponent,
                 ShareComponent,
+                NavMenuComponent,
+                ProfileComponent,
             ],
             imports: [
                 BrowserModule,
@@ -48,7 +53,7 @@ var AppModule = /** @class */ (function () {
                     },
                 ]),
             ],
-            providers: [AdventureTimeService],
+            providers: [AdventureTimeService, AuthService],
             bootstrap: [AppComponent]
         })
     ], AppModule);

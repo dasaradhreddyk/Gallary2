@@ -9,13 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, ViewChild } from '@angular/core';
 import { ModalService } from './services/modal.service';
+import { AuthService } from './auth.service';
 import { ShareComponent } from './share/share.component';
 var AppComponent = /** @class */ (function () {
     //public clickedEvent: Event;
-    function AppComponent(modalService) {
+    function AppComponent(modalService, auth) {
         this.modalService = modalService;
+        this.auth = auth;
         this.title = 'app';
         this.isAuthenticated = false;
+        auth.handleAuthentication();
     }
     AppComponent.prototype.openModal = function (id) {
         this.modalService.open(id);
@@ -47,7 +50,7 @@ var AppComponent = /** @class */ (function () {
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.css']
         }),
-        __metadata("design:paramtypes", [ModalService])
+        __metadata("design:paramtypes", [ModalService, AuthService])
     ], AppComponent);
     return AppComponent;
 }());

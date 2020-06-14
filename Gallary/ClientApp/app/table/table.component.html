@@ -7,9 +7,9 @@
   <br>
 
   <table>
-      <tr>
+      <!--<tr>
           <th *ngFor="let c of columns">{{c}}</th>
-      </tr>
+      </tr>-->
      
       <tr class="component-style table-row-component" *ngFor="let ch of characters | async" app-table-row [character]="ch"  [url]=url  (searchword)="childEventClicked($event)" [columns]="columns">
       </tr>

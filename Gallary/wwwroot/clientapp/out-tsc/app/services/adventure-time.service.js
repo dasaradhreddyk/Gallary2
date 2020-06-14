@@ -54,6 +54,9 @@ var AdventureTimeService = /** @class */ (function () {
     AdventureTimeService.prototype.GetFavourites = function (str) {
         var _this = this;
         var url = "/api/data/GetFavourites?userid=" + str;
+        while (CHARACTERS1.length > 0) {
+            CHARACTERS1.pop();
+        }
         this.http.get(url).subscribe(function (result) {
             _this.data = result;
             console.log(_this.data);
