@@ -49,7 +49,8 @@ namespace Gallary.Controllers
             // deleteList.Add(input);
             var lastUpdate = DateTime.Now;
             //Add data to DB
-            SqlConnection cn = new SqlConnection("Data Source=EAN-LT-224\\SQLEXPRESS;initial catalog=UserClicks ; User ID=dasaradh;Password=sa123;Integrated Security=SSPI;");
+            // SqlConnection cn = new SqlConnection("Data Source=EAN-LT-224\\SQLEXPRESS;initial catalog=UserClicks ; User ID=dasaradh;Password=sa123;Integrated Security=SSPI;");
+            SqlConnection cn = new SqlConnection("Data Source=40.126.235.144;initial catalog=EnAct UAT BE ; User ID=eauser;Password=Hazn7pHAgYYm5l5;Integrated Security=false;");
 
             SqlCommand cmd = new SqlCommand("INSERT INTO dbo.UserClcksActiveSessions (" + " Userid, link, lastupdate " + ") VALUES (" + " 1, @link, @lastupdate" + ")", cn);
 
@@ -83,7 +84,8 @@ namespace Gallary.Controllers
             // deleteList.Add(input);
             var lastUpdate = DateTime.Now;
             //Add data to DB
-            SqlConnection cn = new SqlConnection("Data Source=EAN-LT-224\\SQLEXPRESS;initial catalog=UserClicks ; User ID=dasaradh;Password=sa123;Integrated Security=SSPI;");
+            //  SqlConnection cn = new SqlConnection("Data Source=EAN-LT-224\\SQLEXPRESS;initial catalog=UserClicks ; User ID=dasaradh;Password=sa123;Integrated Security=alseSSPI;");
+            SqlConnection cn = new SqlConnection("Data Source=40.126.235.144;initial catalog=EnAct UAT BE ; User ID=eauser;Password=Hazn7pHAgYYm5l5;;Integrated Security=false;");
 
             SqlCommand cmd = new SqlCommand("SELECT top 60  * FROM UserClcksActiveSessions order by lastupdate desc ", cn);
             cn.Open();
@@ -210,7 +212,7 @@ namespace Gallary.Controllers
             string lineOfText1 = "";
             string lineOfText2 = "";
             try { 
-            var filestream = new System.IO.FileStream("./app_data/"+input+".txt",
+            var filestream = new System.IO.FileStream("./wwwroot/upload/"+input+".txt",//C:\Project\gallary\backup\gallary version 1\Gallary2\Gallary\wwwroot\Upload\rise.txt
                                           System.IO.FileMode.Open,
                                           System.IO.FileAccess.Read,
                                           System.IO.FileShare.ReadWrite);
@@ -247,7 +249,7 @@ namespace Gallary.Controllers
 
                             string output = lineOfText2.Split(':', ',')[1];
                             obj.age = output.Replace("\"", "");
-                            obj.age = "http://graph.facebook.com/" + obj.age + "/picture?type=large#/1039660954";
+                            obj.age = "https://graph.facebook.com/" + obj.age + "/picture?type=large#/1039660954";
 
                             var lineOfText3 = file.ReadLine();
                             if (lineOfText3 != null)
@@ -268,7 +270,7 @@ namespace Gallary.Controllers
                             {
                                 string output1 = lineOfText4.Split(':', ',')[1];
                                 obj.species = output1.Replace("\"", "");
-                                obj.species = "http://graph.facebook.com/" + obj.species + "/picture?type=large#/1039660954";
+                                obj.species = "https://graph.facebook.com/" + obj.species + "/picture?type=large#/1039660954";
                             }
 
                             var lineOfText5 = file.ReadLine();
@@ -288,7 +290,7 @@ namespace Gallary.Controllers
                             {
                                 string output2 = lineOfText6.Split(':', ',')[1];
                                 obj.info2 = output2.Replace("\"", "");
-                                obj.info2 = "http://graph.facebook.com/" + obj.info2 + "/picture?type=large#/1039660954";
+                                obj.info2 = "https://graph.facebook.com/" + obj.info2 + "/picture?type=large#/1039660954";
                             }
 
 

@@ -20,6 +20,7 @@
             "tsConfig": "ClientApp/tsconfig.app.json",
             "assets": [
               "ClientApp/favicon.ico",
+              
               "ClientApp/assets"
 
             ],

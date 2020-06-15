@@ -13,6 +13,7 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
 import { HttpClient } from '@angular/common/http';
 import { CHARACTERS } from './mock-data';
+import { CHARACTERS1 } from './mock-data';
 var AdventureTimeService = /** @class */ (function () {
     function AdventureTimeService(http) {
         var _this = this;
@@ -44,11 +45,27 @@ var AdventureTimeService = /** @class */ (function () {
         return ["name", "age", "species", "occupation", "info1", "info2"];
     };
     //delete content 
-    AdventureTimeService.prototype.DeleteContent = function (str) {
-        var url = "/api/data/DeleteContent?input=" + str;
+    AdventureTimeService.prototype.Updateclicks = function (str) {
+        var url = "/api/data/Updateclicks?input=" + str;
         this.http.get(url).subscribe(function (result) {
             console.log("deleted content");
         });
+    };
+    AdventureTimeService.prototype.GetFavourites = function (str) {
+        var _this = this;
+        var url = "/api/data/GetFavourites?userid=" + str;
+        while (CHARACTERS1.length > 0) {
+            CHARACTERS1.pop();
+        }
+        this.http.get(url).subscribe(function (result) {
+            _this.data = result;
+            console.log(_this.data);
+            _this.data.forEach(function (element) {
+                CHARACTERS1.push(element);
+            });
+            CHARACTERS1.push(_this.data[0]);
+        }, function (error) { return console.error(error); });
+        return Observable.of(CHARACTERS1).delay(100);
     };
     //video data ..
     AdventureTimeService.prototype.getVideodata = function (searchword) {

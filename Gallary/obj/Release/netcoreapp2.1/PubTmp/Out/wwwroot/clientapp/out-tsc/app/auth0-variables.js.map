@@ -1,0 +1,1 @@
+{"version":3,"file":"auth0-variables.js","sourceRoot":"","sources":["../../../../ClientApp/app/auth0-variables.ts"],"names":[],"mappings":"AAOA,MAAM,CAAC,IAAM,WAAW,GAAe;IACnC,QAAQ,EAAE,kCAAkC;IAC5C,MAAM,EAAE,qBAAqB;IAC7B,WAAW,EAAE,wBAAwB;IACrC,MAAM,EAAE,qCAAqC;CAChD,CAAC"}

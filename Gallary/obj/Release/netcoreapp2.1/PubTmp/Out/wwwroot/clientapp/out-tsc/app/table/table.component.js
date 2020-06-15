@@ -7,12 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { AdventureTimeService } from '../services/adventure-time.service';
 var TableComponent = /** @class */ (function () {
     function TableComponent(atService, route, router) {
         this.atService = atService;
+        this.urlEmit = new EventEmitter();
         // const snapshot: RouterStateSnapshot = route.routerState.snapshot;
         console.log(route.queryParams);
         route.queryParams.subscribe(function (params) {
@@ -24,6 +25,11 @@ var TableComponent = /** @class */ (function () {
             console.log(val instanceof NavigationEnd);
         });
     }
+    TableComponent.prototype.childEventClicked = function (event) {
+        this.url = event["url"];
+        this.urlEmit.emit({ url: this.url, type: "" });
+        console.log("url in parent  :" + this.url);
+    };
     TableComponent.prototype.ngOnChanges = function (changes) {
         this.columns = this.atService.getColumns();
         this.characters = this.atService.getCharacters(this.searchword);
@@ -42,6 +48,18 @@ var TableComponent = /** @class */ (function () {
         Input(),
         __metadata("design:type", String)
     ], TableComponent.prototype, "type", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], TableComponent.prototype, "url", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], TableComponent.prototype, "searchword1", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], TableComponent.prototype, "urlEmit", void 0);
     TableComponent = __decorate([
         Component({
             selector: 'app-table',
