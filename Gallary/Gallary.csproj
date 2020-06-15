@@ -10,6 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\_redirects" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="ClientApp\_redirects" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ClientApp\NewFolder\" />
     <Folder Include="wwwroot\" />
