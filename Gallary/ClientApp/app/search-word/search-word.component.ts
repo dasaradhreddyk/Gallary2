@@ -14,6 +14,7 @@ export class SearchWordComponent implements OnInit {
     public Events1: Array<string> = ["live", "fastsearch", "fastsearch"];
     @Output() searchword = new EventEmitter < { searchword: string, type: string }>();
     typeId: string;
+    placeId: string;
     //More app code
     //onSearch  
     sendNotification(placeId,type) {

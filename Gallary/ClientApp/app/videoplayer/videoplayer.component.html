@@ -39,11 +39,11 @@
     <!--/.Controls-->
 </div>
 <!--Carousel Wrapper--><!-- Grid row -->
-<iframe [class.thumbnail]="thumbnail" [src]="safeSrc" width="760" height="415" frameborder="0" webkitallowfullscreen mozallowfullscreen
+<iframe  [src]="safeSrc" width="760" height="415" frameborder="0" webkitallowfullscreen mozallowfullscreen
         allowfullscreen></iframe>
 <p *ngFor="let ids of videoids; last as isLast">test{{ids}}
 </p>
 <p *ngFor="let ss of safeSrc2; last as isLast">
-    <iframe [class.thumbnail]="thumbnail" [src]="ss" width="760" height="415" frameborder="0" webkitallowfullscreen mozallowfullscreen
+    <iframe  [src]="ss" width="760" height="415" frameborder="0" webkitallowfullscreen mozallowfullscreen
             allowfullscreen></iframe>
 </p>
